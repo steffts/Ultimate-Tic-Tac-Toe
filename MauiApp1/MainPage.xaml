@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage">
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="LightSeaGreen" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        
+        <Grid Padding="10" RowSpacing="5" ColumnSpacing="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label x:Name="ScoreLabel" Text="X: 0 - O: 0" FontSize="30" HorizontalOptions="Start" />
+            <!-- Голямо поле -->
+            <Grid x:Name="BigGrid" Grid.Row="0" RowSpacing="2" ColumnSpacing="2" BackgroundColor="LightGray">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Малки полета -->
+                <ContentView Grid.Row="0" Grid.Column="0" x:Name="SmallGrid_0_0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Row="0" Grid.Column="0" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="0" Grid.Column="1" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="0" Grid.Column="2" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="1" Grid.Column="0" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="1" Grid.Column="1" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="1" Grid.Column="2" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="2" Grid.Column="0" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="2" Grid.Column="1" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="2" Grid.Column="2" Clicked="OnCellClicked"/>
+                    </Grid>
+                </ContentView>
+                <ContentView Grid.Row="0" Grid.Column="1" x:Name="SmallGrid_0_1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Row="0" Grid.Column="0" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="0" Grid.Column="1" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="0" Grid.Column="2" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="1" Grid.Column="0" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="1" Grid.Column="1" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="1" Grid.Column="2" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="2" Grid.Column="0" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="2" Grid.Column="1" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="2" Grid.Column="2" Clicked="OnCellClicked"/>
+                    </Grid>
+                </ContentView>
+                <ContentView Grid.Row="0" Grid.Column="2" x:Name="SmallGrid_0_2">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Row="0" Grid.Column="0" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="0" Grid.Column="1" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="0" Grid.Column="2" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="1" Grid.Column="0" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="1" Grid.Column="1" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="1" Grid.Column="2" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="2" Grid.Column="0" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="2" Grid.Column="1" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="2" Grid.Column="2" Clicked="OnCellClicked"/>
+                    </Grid>
+                </ContentView>
+                <ContentView Grid.Row="1" Grid.Column="0" x:Name="SmallGrid_1_0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Row="0" Grid.Column="0" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="0" Grid.Column="1" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="0" Grid.Column="2" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="1" Grid.Column="0" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="1" Grid.Column="1" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="1" Grid.Column="2" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="2" Grid.Column="0" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="2" Grid.Column="1" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="2" Grid.Column="2" Clicked="OnCellClicked"/>
+                    </Grid>
+                </ContentView>
+                <ContentView Grid.Row="1" Grid.Column="1" x:Name="SmallGrid_1_1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Row="0" Grid.Column="0" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="0" Grid.Column="1" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="0" Grid.Column="2" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="1" Grid.Column="0" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="1" Grid.Column="1" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="1" Grid.Column="2" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="2" Grid.Column="0" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="2" Grid.Column="1" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="2" Grid.Column="2" Clicked="OnCellClicked"/>
+                    </Grid>
+                </ContentView>
+                <ContentView Grid.Row="1" Grid.Column="2" x:Name="SmallGrid_1_2">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Row="0" Grid.Column="0" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="0" Grid.Column="1" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="0" Grid.Column="2" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="1" Grid.Column="0" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="1" Grid.Column="1" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="1" Grid.Column="2" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="2" Grid.Column="0" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="2" Grid.Column="1" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="2" Grid.Column="2" Clicked="OnCellClicked"/>
+                    </Grid>
+                </ContentView>
+                <ContentView Grid.Row="2" Grid.Column="0" x:Name="SmallGrid_2_0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Row="0" Grid.Column="0" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="0" Grid.Column="1" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="0" Grid.Column="2" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="1" Grid.Column="0" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="1" Grid.Column="1" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="1" Grid.Column="2" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="2" Grid.Column="0" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="2" Grid.Column="1" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="2" Grid.Column="2" Clicked="OnCellClicked"/>
+                    </Grid>
+                </ContentView>
+                <ContentView Grid.Row="2" Grid.Column="1" x:Name="SmallGrid_2_1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Row="0" Grid.Column="0" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="0" Grid.Column="1" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="0" Grid.Column="2" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="1" Grid.Column="0" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="1" Grid.Column="1" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="1" Grid.Column="2" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="2" Grid.Column="0" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="2" Grid.Column="1" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="2" Grid.Column="2" Clicked="OnCellClicked"/>
+                    </Grid>
+                </ContentView>
+                <ContentView Grid.Row="2" Grid.Column="2" x:Name="SmallGrid_2_2">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Row="0" Grid.Column="0" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="0" Grid.Column="1" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="0" Grid.Column="2" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="1" Grid.Column="0" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="1" Grid.Column="1" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="1" Grid.Column="2" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="2" Grid.Column="0" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="2" Grid.Column="1" Clicked="OnCellClicked"/>
+                        <Button Grid.Row="2" Grid.Column="2" Clicked="OnCellClicked"/>
+                    </Grid>
+                </ContentView>
+            </Grid>
+
+            <Label Grid.Row="1" 
+                       Text="Играч на ход: X" 
+                       x:Name="CurrentPlayerLabel" 
+                       FontSize="18" 
+                       HorizontalOptions="Center" />
+
+            <Button Text="Рестартирай играта"
+                Clicked="OnResetGameClicked"
+                HorizontalOptions="Center"
+                VerticalOptions="End" />
+
+
+            
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
+
