@@ -40,3 +40,17 @@ This project is a **Ultimate Tic-Tac-Toe** game implemented in **.NET MAUI**. Th
    ```bash
    git clone https://github.com/yourusername/ultimate-tic-tac-toe.git
    cd ultimate-tic-tac-toe
+   Open the project in Visual Studio:
+
+2. start MauiApp1.sln
+Build and run the app:
+
+3. Use the Android Emulator, iOS Simulator, or your local device to test the application.
+Running the App
+   ### Start the app.
+- The current player is displayed at the top.
+- Tap on the active grid to make a move.
+- Follow the rules of Ultimate Tic-Tac-Toe:
+- Your move determines the active grid for your opponent.
+- Capture grids to win the overall game.
+- The scores are updated dynamically for each player.
